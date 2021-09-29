@@ -10,6 +10,8 @@ function blurring() {
   }
   console.log(load)
   loadingText.innerHTML = `${load}%`
+  loadingText.style.opacity = scale(load, 0, 100, 1, 0)
+  bg.style.filter = `blur(${scale(load, 0, 100, 20, 0)}px)`
 }
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
