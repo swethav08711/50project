@@ -12,6 +12,30 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.btn {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid white;
+  padding: 15px;
+  width: 15rem;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   position: relative;
   background-color: #333;
@@ -24,6 +48,7 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
 .split.left {
   left: 0;
   background: url("ps.jpg");
