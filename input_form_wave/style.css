@@ -59,3 +59,9 @@ body {
   outline: 0;
   border-bottom-color: lightblue;
 }
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
