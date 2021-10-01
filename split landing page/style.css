@@ -79,6 +79,12 @@ h1 {
   height: 100%;
   background-color: var(--left-bg-color);
 }
+.split.left,
+.split.left::before,
+.split.right,
+.split.right::before {
+  transition: all 1s ease-in-out;
+}
 .split.right::before {
   content: "";
   position: absolute;
@@ -92,10 +98,10 @@ h1 {
 .hover-left .right {
   width: var(--other-width);
 }
-.hover-left .left {
+.hover-right .left {
   width: var(--other-width);
 }
-.hover-left .right {
+.hover-right .right {
   width: var(--hover-width);
 }
 @media (max-width: 800px) {
