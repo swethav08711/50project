@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: tan;
   font-family: "Santepheap", sans-serif;
   margin: 0;
   display: flex;
@@ -11,5 +12,19 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+.box {
+  background-color: steelblue;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box h2 {
+  color: white;
+  font-size: 26px;
 }
