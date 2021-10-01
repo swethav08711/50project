@@ -43,6 +43,7 @@ body {
 }
 .form-control {
   position: relative;
+  margin: 20px 030px;
 }
 .form-control input {
   background-color: transparent;
@@ -64,4 +65,12 @@ body {
   position: absolute;
   top: 15px;
   left: 0;
+}
+.form-control label span {
+  display: inline-block;
+  transition: transform 0.3s ease-in;
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
 }
