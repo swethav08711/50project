@@ -23,6 +23,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateX(400%);
+  transition: transform 0.5s ease;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+.box.show {
+  transform: translateX(0);
 }
 .box h2 {
   color: white;
