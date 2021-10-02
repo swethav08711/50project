@@ -4,12 +4,28 @@
   box-sizing: border-box;
 }
 body {
+  background-color: rgb(161, 100, 223);
   font-family: "Santepheap", sans-serif;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
+  text-align: center;
+}
+.btn {
+  background-color: rebeccapurple;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
 }
