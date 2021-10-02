@@ -32,4 +32,16 @@ body {
 .btn {
   background-color: #9f68e0;
   border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  font-size: 16px;
+}
+.joke {
+  font-size: 26px;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin: 50px auto;
+  max-width: 600px;
 }
