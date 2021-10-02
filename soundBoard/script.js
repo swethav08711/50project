@@ -5,5 +5,16 @@ sounds.forEach((sound) => {
   btn.classList.add("btn")
   btn.innerText = sound
 
+  btn.addEventListener("click", () => {
+    stopPlaying()
+    document.getElementById(sound).play()
+  })
   document.getElementById("buttons").append(btn)
 })
+function stopPlaying() {
+  sounds.forEach((sound) => {
+    const audio = document.getElementById(sound)
+    audio.pause()
+    audio.currentTime = 0
+  })
+}
