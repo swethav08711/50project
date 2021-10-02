@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  background-color: #686de0;
   font-family: "Santepheap", sans-serif;
   margin: 0;
   display: flex;
@@ -12,4 +13,23 @@ body {
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
+  margin: 0;
+  padding: 20px;
+}
+.conatiner {
+  background-color: #fff;
+  padding: 50px 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 800px;
+  max-width: 100%;
+}
+.conatiner h1 {
+  font-size: 16px;
+  color: grey;
+  letter-spacing: 2px;
+}
+.btn {
+  background-color: #9f68e0;
+  border: none;
 }
