@@ -37,6 +37,7 @@ textarea {
   border-radius: 50px;
   color: #fff;
   display: inline-block;
+  margin: 0 5px;
 }
 .tag.highlight {
   background-color: darkblue;
