@@ -1,15 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400&family=Scheherazade+New&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400&family=Roboto Mono&display=swap");
 
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "Santepheap", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
+  background-color: rebeccapurple;
+  color: white;
   margin: 0;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
+}
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 50px;
+}
+.counter {
+  font-size: 60px;
+}
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
 }
