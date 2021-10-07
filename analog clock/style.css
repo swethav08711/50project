@@ -34,6 +34,15 @@ body {
   position: absolute;
   bottom: 100px;
   left: 50%;
+  transform: translate(-50%);
+  background-color: transparent;
+  border: 5px solid var(--border-color);
+  color: var(--secondary);
+  padding: 10px 20px;
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, var(--opacity)),
+    2px 2px 20px 3px rgba(0, 0, 0, var(--insert-opacity)) inset;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 .clock-container {
   display: flex;
@@ -42,9 +51,11 @@ body {
 }
 .time {
   font-size: 60px;
+  color: var(--secondary);
 }
 .date {
   font-size: 30px;
+  color: var(--secondary);
 }
 .clock {
   height: 200px;
@@ -52,7 +63,7 @@ body {
   border-radius: 50%;
   box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, var(--opacity)),
     2px 2px 20px 3px rgba(0, 0, 0, var(--insert-opacity)) inset;
-  border: 7px solid white;
+  border: 7px solid var(--border-color);
   margin-bottom: 50px;
   position: relative;
 }
@@ -63,13 +74,13 @@ body {
   transform-origin: bottom center;
 }
 .hand.hour {
-  background-color: black;
+  background-color: var(--secondary);
   width: 5px;
   height: 55px;
   transform: translate(-50%, -100%) rotate(0deg);
 }
 .hand.minute {
-  background-color: black;
+  background-color: var(--secondary);
   width: 3px;
   height: 70px;
   transform: translate(-50%, -100%) rotate(0deg);
