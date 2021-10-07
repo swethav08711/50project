@@ -122,9 +122,23 @@ function setGenre() {
       }
       console.log(selectedGenre)
       getmovies(api_url + "&with_genres=" + encodeURI(selectedGenre.join(",")))
+      highlightselection()
     })
     tagsEl.append(t)
   })
+}
+
+function highlightselection() {
+  const tags = document.querySelectorAll(".tag")
+  tags.forEach(tag => {
+    tag.classList.remove("highlight")
+  })
+  if (selectedGenre.length !== 0) {
+    selectedGenre.forEach(id => {
+      const highlighitedtag = document.getElementById(id)
+      highlighitedtag.classList.add("highlight")
+    })
+  }
 }
 
 function showmoives(data) {
@@ -135,7 +149,11 @@ function showmoives(data) {
     movieEl.classList.add("movie")
     movieEl.innerHTML = `
     <img
-          src="${img_url + poster_path}"
+          src="${
+            poster_path
+              ? img_url + poster_path
+              : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png"
+          }"
           alt="${title}"
         />
 

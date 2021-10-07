@@ -112,3 +112,6 @@ main {
   display: inline-block;
   cursor: pointer;
 }
+.tag.highlight {
+  background-color: red;
+}
