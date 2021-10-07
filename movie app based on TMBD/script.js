@@ -91,7 +91,11 @@ function getmovies(url) {
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      showmoives(data.results)
+      if (data.results.length !== 0) {
+        showmoives(data.results)
+      } else {
+        main.innerHTML = `<h1 class="no-res">No Results Found</h1>`
+      }
       console.log(data.results)
     })
 }
@@ -128,11 +132,30 @@ function setGenre() {
   })
 }
 
+function clearbtn() {
+  let clearbtn = document.getElementById("clear")
+  if (clearbtn) {
+    clearbtn.classList.add("highlight")
+  } else {
+    let clear = document.createElement("div")
+    clear.classList.add("tag", "highlight")
+    clear.id = "clear"
+    clear.innerText = "Clear x"
+    clear.addEventListener("click", () => {
+      selectedGenre = []
+      setGenre()
+      getmovies(api_url)
+    })
+    tagsEl.append(clear)
+  }
+}
+
 function highlightselection() {
   const tags = document.querySelectorAll(".tag")
   tags.forEach(tag => {
     tag.classList.remove("highlight")
   })
+  clearbtn()
   if (selectedGenre.length !== 0) {
     selectedGenre.forEach(id => {
       const highlighitedtag = document.getElementById(id)
@@ -152,7 +175,7 @@ function showmoives(data) {
           src="${
             poster_path
               ? img_url + poster_path
-              : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png"
+              : "https://via.placeholder.com/1080x1580"
           }"
           alt="${title}"
         />
@@ -181,6 +204,8 @@ function getcolor(vote) {
 form.addEventListener("submit", e => {
   e.preventDefault()
   const searchTerm = search.value
+  selectedGenre = []
+  setGenre()
   if (searchTerm) {
     getmovies(search_url + "&query=" + searchTerm)
   } else {

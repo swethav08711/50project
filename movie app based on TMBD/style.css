@@ -115,3 +115,6 @@ main {
 .tag.highlight {
   background-color: red;
 }
+.no-res {
+  color: white;
+}
